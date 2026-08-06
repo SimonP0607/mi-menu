@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<main>
+  <section>
+    <h2>Nuestros platos</h2>
+    <div class="menu-grid">
+      <% platos.forEach(function (plato) { %>
+        <article class="plato-card">
+          <h3><%= plato.nombre %></h3>
+          <p class="categoria"><%= plato.categoria %></p>
+          <p class="precio">$<%= plato.precio.toFixed(2) %></p>
+          <a class="boton" href="/platos/<%= plato.id %>">Ver detalle</a>
+        </article>
+      <% }); %>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

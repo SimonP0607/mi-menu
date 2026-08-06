@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<main>
+  <article class="detalle">
+    <h2><%= plato.nombre %></h2>
+    <p class="categoria"><%= plato.categoria %></p>
+    <p><%= plato.descripcion %></p>
+    <p class="precio">Precio: $<%= plato.precio.toFixed(2) %></p>
+
+    <section class="estado">
+      <% if (plato.disponibles > 0) { %>
+        <p class="disponible">Disponible (<%= plato.disponibles %> porciones)</p>
+      <% } else { %>
+        <p class="agotado">Agotado</p>
+      <% } %>
+    </section>
+
+    <section class="chef">
+      <h3>Chef responsable</h3>
+      <p>Nombre: <%= plato.chef.nombre %></p>
+      <p>Especialidad: <%= plato.chef.especialidad %></p>
+    </section>
+
+    <a class="boton" href="/">Volver al menu</a>
+  </article>
+</main>
+
+<%- include('partials/footer') %>
