@@ -1,7 +1,7 @@
 {
   "name": "mi-menu",
   "version": "1.0.0",
-  "description": "Menu de restaurante multipagina con Express y EJS",
+  "description": "Menu de restaurante con Express, EJS y MongoDB Atlas",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,6 +10,6 @@
     "dotenv": "^17.4.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "pg": "^8.23.0"
+    "mongoose": "^8.9.5"
   }
 }
